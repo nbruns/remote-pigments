@@ -131,8 +131,8 @@ def fixed_refl (refl_array, waves, meta, choose_wave):
 # In[5]:
 
 
-h5_filename = './dela_tiles/NEON_D08_DELA_DP3_425000_3600000_reflectance.h5' #input
-
+# h5_filename = './dela_tiles/NEON_D08_DELA_DP3_425000_3600000_reflectance.h5' #input
+# h5_filename='/Volumes/Erasmus/NEON_data/project_data/dela_tiles/NEON_D08_DELA_DP3_425000_3600000_reflectance.h5' # narrow to the east of imagined buoy
 
 # In[9]:
 
@@ -193,19 +193,19 @@ def pigment_in_h2o (file_name,pig_type):
 # In[11]:
 
 
-chla_array = pigment_in_h2o(h5_filename,'chla')
-chla_array
+# chla_array = pigment_in_h2o(h5_filename,'chla')
+# chla_array
 
 
-# In[13]:
+# # In[13]:
 
 
-phyco_array = pigment_in_h2o(h5_filename,'phyco')
-phyco_array
+# phyco_array = pigment_in_h2o(h5_filename,'phyco')
+# phyco_array
 
 
-# In[14]:
+# # In[14]:
 
 
-phyco_array.shape
+# phyco_array.shape
 
