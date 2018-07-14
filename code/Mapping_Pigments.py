@@ -134,7 +134,7 @@ def fixed_refl (refl_array, waves, meta, choose_wave):
 h5_filename = './dela_tiles/NEON_D08_DELA_DP3_425000_3600000_reflectance.h5' #input
 
 
-# In[6]:
+# In[9]:
 
 
 #Need h5reflarray from workshop
@@ -168,6 +168,7 @@ def pigment_in_h2o (file_name,pig_type):
               colorlimit = (0,200),
               cmap_title = '[Chlorophyll a]',        
               colormap = 'Greens')
+        return conc_pig
     else:
         if  pig_type == 'phyco':
             refl_pig = fixed_refl(refl_array=reflArray, waves=wavelengths, meta=metadata, choose_wave=620)
@@ -181,6 +182,7 @@ def pigment_in_h2o (file_name,pig_type):
               colorlimit = (0,200),
               cmap_title = '[Phycocyanin]',        
               colormap = 'cool')
+            return conc_pig
         else: 
             return print("Can't do that pigment!")
             
@@ -188,14 +190,22 @@ def pigment_in_h2o (file_name,pig_type):
  
 
 
-# In[7]:
+# In[11]:
 
 
-pigment_in_h2o(h5_filename,'chla')
+chla_array = pigment_in_h2o(h5_filename,'chla')
+chla_array
 
 
-# In[8]:
+# In[13]:
 
 
-pigment_in_h2o(h5_filename,'phyco')
+phyco_array = pigment_in_h2o(h5_filename,'phyco')
+phyco_array
+
+
+# In[14]:
+
+
+phyco_array.shape
 
